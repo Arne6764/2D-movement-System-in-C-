@@ -1,4 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
 using System;
 
 class Program
@@ -6,14 +5,14 @@ class Program
     static void Main()
     {
         char[][] grid = {
-                        new char[] {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
-                        new char[] {'#', '#', '#', '#', '#', '#', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#'},
-                        new char[] {'#', '#', '#', '#', '#', '#', ' ', '#', '#', ' ', '#', ' ', '#', ' ', '#'},
-                        new char[] {'#', ' ', ' ', ' ', ' ', '#', ' ', '#', '#', ' ', '#', ' ', '#', ' ', '#'},
-                        new char[] {'#', ' ', 'P', '#', ' ', '#', ' ', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
-                        new char[] {'#', ' ', ' ', '#', ' ', '#', '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
-                        new char[] {'#', ' ', ' ', '#', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', '#'},
-                        new char[] {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}
+                        new char[] { '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█'},
+                        new char[] { '█', '█', '█', '█', '█', '█', '░', '░', '░', '░', '█', '░', '░', '░', '█'},
+                        new char[] { '█', '█', '█', '█', '█', '█', '░', '█', '█', '░', '█', '░', '█', '░', '█'},
+                        new char[] { '█', '░', '░', '░', '░', '█', '░', '█', '█', '░', '█', '░', '█', '░', '█'},
+                        new char[] { '█', '░', 'P', '█', '░', '█', '░', '░', '█', '░', '█', '░', '█', '░', '█'},
+                        new char[] { '█', '░', '░', '█', '░', '█', '█', '░', '█', '░', '█', '░', '█', '░', '█'},
+                        new char[] { '█', '░', '░', '█', '░', '░', '░', '░', '█', '░', '░', '░', '█', '░', '█'},
+                        new char[] { '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█', '█' }
                 };
 
         int playerRow = 2;
@@ -46,7 +45,7 @@ class Program
                 newPlayerCol += 1;
             }
 
-            if (grid[newPlayerRow][newPlayerCol] != '#')
+            if (grid[newPlayerRow][newPlayerCol] != '█')
             {
                 UpdatePlayerPosition(grid, playerRow, playerCol, newPlayerRow, newPlayerCol);
                 playerRow = newPlayerRow;
@@ -71,7 +70,7 @@ class Program
 
     static void UpdatePlayerPosition(char[][] grid, int oldRow, int oldCol, int newRow, int newCol)
     {
-        grid[oldRow][oldCol] = ' ';
+        grid[oldRow][oldCol] = '░';
         grid[newRow][newCol] = 'P';
     }
 }
