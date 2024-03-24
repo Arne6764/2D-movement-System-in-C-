@@ -9,3 +9,5 @@ This includes:
 - A system for rebuilding the map behind the player instead of getting rid of it
 - A basic character that can be replaced with any ASCII character
 ---------------------------------------
+# Important instructons:
+You ***must*** choose the induvidual language that you want, as they will ***not*** work if all files are in the same project.
